@@ -33,11 +33,4 @@ jobs:
         run: |
           npm install,
           npm run build,
-
-      - uses: 43f9b/firebase-action@master
-        with:
-          args: deploy --only hosting
-
-        env:
-          CI: true
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          firebase deploy
